@@ -190,7 +190,7 @@ public class Hilo extends Thread {
                 System.out.println(cont);
                 System.out.println(resp);
 
-            } while (cont <= 10 && !Objects.equals(resp, "4"));
+            } while (cont < 10 && !Objects.equals(resp, "4"));
             if (cont == 10) {
                 String msg = "Milesker jolasteagtik,\nzure puntuaketa: " + puntos + "\neratzun zuzenak: " + aciertos + "\nerantzun okerrak: " + errores;
                 try {

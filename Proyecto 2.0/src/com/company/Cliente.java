@@ -79,7 +79,7 @@ public class Cliente extends Thread {
         int eleccion = normas(oos, ois, br);
         if (eleccion == 1) {
             System.out.println("jokoa has dezala");
-            int cont = 0;
+            int cont = 1;
             String resp = null;
             PublicKey Spuk = (PublicKey) ois.readObject();
             oos.writeObject(puk);
@@ -101,7 +101,7 @@ public class Cliente extends Thread {
                 cont++;
 
 
-            } while (cont <= 10 && !resp.equals("4"));
+            } while (cont < 10 && !resp.equals("4"));
             if (cont == 10) {
                 String msg = (String) ois.readObject();
                 System.out.println(msg);
